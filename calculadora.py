@@ -29,27 +29,37 @@ while op:
                             print("para hacer este calculo necesito que ingrese el perimetro y el apotema")
                             perimetro = float(input("ingrese el perimetro: "))
                             apotema = float(input("ingrese la apotema en entero o decimal: "))
-                            area = (perimetro * apotema) / 2
-                            print("el area es:", area)
-                            h = False
+                            if perimetro > 0 and apotema > 0:
+                                
+                                area = (perimetro * apotema) / 2
+                                print("el area es:", area)
+                                h = False
+                            else:
+                                print("error no puedes poner numeros negativos y tine que se mayor a cero")
                         except:
                             print("ingrese valor valido")
                     elif oph == 2:
                         try:
                             print("para hallar el perimetro necesito que me de un lado")
                             lado = float(input("ingrese el lado en entero o decimal: "))
-                            perimetro = 6 * lado
-                            print("el perimetro es:", perimetro)
-                            h = False
+                            if lado > 0:
+                                perimetro = 6 * lado
+                                print("el perimetro es:", perimetro)
+                                h = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("ingrese valor valido")
                     elif oph == 3:
                         try:
                             print("para hacer este calculo necesito que ingrese el lado")
                             lado = float(input("ingrese lado: "))
-                            apotema = (3**(1/2))/2 * lado
-                            print("la apotema es:", apotema)
-                            h = False
+                            if lado > 0:
+                                apotema = (3**(1/2))/2 * lado
+                                print("la apotema es:", apotema)
+                                h = False
+                            else:
+                                print("error no puedes ingresear numeros menores o igual a cero")
                         except:
                             print("ingrese una opcion valida")
                 except:
@@ -69,9 +79,16 @@ while op:
                         try:
                             a1 = float(input("ingrese el angulo uno: "))
                             a2 = float(input("ingrese el angulo dos: "))
-                            angulo = 180 - (a1 + a2)
-                            print("el angulo es:", angulo)
-                            t = False
+                            if a1 > 0 and a2 > 0:
+                                suma_angulos = a1 + a2
+                                if suma_angulos <= 179.9: 
+                                    angulo = 180 - (a1 + a2)
+                                    print("el angulo es:", angulo)
+                                    t = False
+                                else:
+                                    print("los datos de los angulos no coiciden")
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif opt == 2:
@@ -79,9 +96,12 @@ while op:
                         try:
                             base = float(input("ingrese la base: "))
                             altura = float(input("ingrese la altura: "))
-                            area = base * altura / 2
-                            print("el area es:", area)
-                            t = False
+                            if base > 0 and altura > 0:
+                                area = base * altura / 2
+                                print("el area es:", area)
+                                t = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif opt == 3:
@@ -89,9 +109,12 @@ while op:
                         try:
                             area = float(input("ingrese el area: "))
                             base = float(input("ingrese la base: "))
-                            altura = (2 * area) / base
-                            print("la altura del triangulo es:", altura)
-                            t = False
+                            if area > 0 and base >0:
+                                altura = (2 * area) / base
+                                print("la altura del triangulo es:", altura)
+                                t = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                 except:
@@ -111,17 +134,24 @@ while op:
                         try:
                             perimetro = float(input("ingrese el perimetro: "))
                             apotema = float(input("ingresa la apotema: "))
-                            area = perimetro * apotema / 2
-                            print("el area es:", area)
+                            if perimetro > 0 and apotema > 0:
+                                area = perimetro * apotema / 2
+                                print("el area es:", area)
+                                p = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif opp == 2:
                         print("para hacer este calculo necesito saber la longitud de un lado")
                         try:
                             lado = float(input("ingrese la longitud de un lado: "))
-                            perimetro = lado * 5
-                            print("el perimetro es:", perimetro)
-                            p = False
+                            if lado > 0:
+                                perimetro = lado * 5
+                                print("el perimetro es:", perimetro)
+                                p = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif opp ==3:
@@ -129,9 +159,12 @@ while op:
                         try:
                             area = float(input("ingrese el area: "))
                             perimetro = float(input("ingrese el perimetro: "))
-                            apotema = (2 * area)/perimetro
-                            print("la apotema es:", apotema)
-                            p = False
+                            if area >0 and perimetro >0:
+                                apotema = (2 * area)/perimetro
+                                print("la apotema es:", apotema)
+                                p = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                 except:
@@ -151,18 +184,24 @@ while op:
                         try:
                             d_mayor = float(input("ingrese la diagonal mayor: "))
                             d_menor = float(input("ingrese la diagonal menor: "))
-                            area = (d_mayor * d_menor) / 2
-                            print("el area es:", area)
-                            r = False
+                            if d_mayor > 0 and d_menor > 0:
+                                area = (d_mayor * d_menor) / 2
+                                print("el area es:", area)
+                                r = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif opr == 2:
                         print("para hacer este calculo necesito saber la longitud de un lado")
                         try:
                             longitud = float(input("ingrese la longitud de un lado: "))
-                            perimetro = 4 * longitud
-                            print("el perimetro es:", perimetro)
-                            r = False
+                            if longitud > 0:
+                                perimetro = 4 * longitud
+                                print("el perimetro es:", perimetro)
+                                r = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif opr ==3:
@@ -170,8 +209,12 @@ while op:
                         try:
                             area = float(input("ingresa el area: "))
                             lado = float(input("ingrese un lado: "))
-                            altura = area / lado
-                            print("la altura es:", altura)
+                            if lado > 0 and area > 0:
+                                altura = area / lado
+                                print("la altura es:", altura)
+                                r = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("intenta de nuevo")
                 except:
@@ -191,9 +234,13 @@ while op:
                         try:
                             base_triangulo = float(input("ingrese la base del triangulo: "))
                             altura_triangulo = float(input("ingrese la altura de la base: "))
-                            area_base = (base_triangulo * altura_triangulo) / 2
-                            print("el area de la base es:", area_base)
-                            pt = False
+                            if base_triangulo > 0 and altura_triangulo > 0:
+                                area_base = (base_triangulo * altura_triangulo) / 2
+                                print("el area de la base es:", area_base)
+                                pt = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
+                            
                         except:
                             print("invalido intente nuevo")
                     elif oppt == 2:
@@ -202,9 +249,12 @@ while op:
                             l_1 = float(input("ingrese el lado 1: "))
                             l_2 = float(input("ingrese el lado 2: "))
                             l_3 = float(input("ingrese el lado 3: "))
-                            perimetro_base = l_1 + l_2 + l_3
-                            print("el perimetro de la base es:", perimetro_base)
-                            pt = False
+                            if l_1 > 0 and l_2 > 0 and l_3 > 0:
+                                perimetro_base = l_1 + l_2 + l_3
+                                print("el perimetro de la base es:", perimetro_base)
+                                pt = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intente nuevo")
                     elif oppt ==3:
@@ -212,9 +262,12 @@ while op:
                         try:
                             area_base = float(input("ingrese el area de la base: "))
                             altura_prisma = float(input("ingrese la altura del prisma: "))
-                            volumen = area_base * altura_prisma
-                            print("el volumen es:", volumen)
-                            pt = False
+                            if area_base >0 and altura_prisma > 0:
+                                volumen = area_base * altura_prisma
+                                print("el volumen es:", volumen)
+                                pt = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                 except:
@@ -229,24 +282,30 @@ while op:
             while c:
                 try:
                     opc = int(input("ingrese una opcion: "))
-                    radio = float(input("ingrese el radio del cilindro: "))
                     pi = 3.1416
-                    if opc == 1:
-                        try:
-                            altura = float(input("ingrese la altura del cilindro: "))
-                            volumen = pi * radio **2 * altura
-                            print("el volumen es:", volumen)
+                    radio = float(input("ingrese el radio del cilindro: "))
+                    if radio > 0:
+                        if opc == 1:
+                            try:
+                                altura = float(input("ingrese la altura del cilindro: "))
+                                if altura > 0:
+                                    volumen = pi * radio **2 * altura
+                                    print("el volumen es:", volumen)
+                                    c = False
+                                else:
+                                    print("error no puedes ingresar numeros igual o menores a cero")
+                            except:
+                                print("error intenta de nuevo")
+                        elif opc == 2:
+                            area_base = pi * radio ** 2
+                            print("el area de la base es:", area_base)
                             c = False
-                        except:
-                            print("error intenta de nuevo")
-                    elif opc == 2:
-                        area_base = pi * radio ** 2
-                        print("el area de la base es:", area_base)
-                        c = False
-                    elif opc ==3:
-                        perimetro_base = 2 * pi * radio
-                        print("perimetro de la base:", perimetro_base)
-                        c = False
+                        elif opc ==3:
+                            perimetro_base = 2 * pi * radio
+                            print("perimetro de la base:", perimetro_base)
+                            c = False
+                    else:
+                        print("el radio debe ser mayro a cero")
                 except:
                     print("invalido intenta de nuevo")
 
@@ -259,30 +318,36 @@ while op:
             e = True
             while e:
                 try:
+                    pi = 3.1416
                     ope = int(input("ingrese la opcion que desea: "))
                     radio = float(input("ingrese el radio de la circunferencia: "))
-                    pi = 3.1416
+                    if radio > 0:
 
-                    if ope == 1:
-                        area_esfera = 4 * pi * radio **2
-                        print("el area de la esfera es:", area_esfera)
-                        e = False
-                    elif ope == 2:
-                        volumen = (4/3) * pi * radio **3
-                        print("el volumen de la esfera es:", volumen)
-                        e = False
-                    elif ope == 3:
-                        circunferencia_max = 2 * pi * radio
-                        print("la circunferencia es:", circunferencia_max)
-                        e = False
-                    elif ope == 4:
-                        try:
-                            altura = float(input("ingrese la altura: "))
-                            casquete = 2 * pi * radio * altura
-                            print("el area del casquete es:", casquete)
+                        if ope == 1:
+                            area_esfera = 4 * pi * radio **2
+                            print("el area de la esfera es:", area_esfera)
                             e = False
-                        except:
-                            print("invalido intenta de nuevo")
+                        elif ope == 2:
+                            volumen = (4/3) * pi * radio **3
+                            print("el volumen de la esfera es:", volumen)
+                            e = False
+                        elif ope == 3:
+                            circunferencia_max = 2 * pi * radio
+                            print("la circunferencia es:", circunferencia_max)
+                            e = False
+                        elif ope == 4:
+                            try:
+                                altura = float(input("ingrese la altura: "))
+                                if altura > 0:
+                                    casquete = 2 * pi * radio * altura
+                                    print("el area del casquete es:", casquete)
+                                    e = False
+                                else:
+                                    print("error no puedes ingresar numeros igual o menores a cero")
+                            except:
+                                print("invalido intenta de nuevo")
+                    else:
+                        print("el radio debe ser mayor a cero")
                 except:
                     print("invalido intenta de nuevo")
 
@@ -294,29 +359,38 @@ while op:
             co = True
             while co:
                 try:
+                    pi = 3.1416
                     opco = int(input("ingrese lo que desea hallar: "))
                     radio = float(input("ingrese el radio del cono: "))
-                    pi = 3.1416
-                    if opco ==1:
-                        try:
-                            altura = float(input("ingrese la altura: "))
-                            volumen = (1/3) * pi * radio **2 * altura
-                            print("el volumen es:", volumen)
+                    if radio > 0:
+                        if opco ==1:
+                            try:
+                                altura = float(input("ingrese la altura: "))
+                                if altura > 0:
+                                    volumen = (1/3) * pi * radio **2 * altura
+                                    print("el volumen es:", volumen)
+                                    co = False
+                                else:
+                                    print("error no puedes ingresar numeros igual o menores a cero")
+                            except:
+                                print("invalido intenta de nuevo")
+                        elif opco == 2:
+                            area_base = pi * radio**2
+                            print("el area de la base es:", area_base)
                             co = False
-                        except:
-                            print("invalido intenta de nuevo")
-                    elif opco == 2:
-                        area_base = pi * radio**2
-                        print("el area de la base es:", area_base)
-                        co = False
-                    elif opco == 3:
-                        try:
-                            generatriz = float(input("ingrese el generatriz del cono: "))
-                            area_total = pi * radio * (radio + generatriz)
-                            print("el area total es:", area_total)
-                            co = False
-                        except:
-                            print("invalido intenta de nuevo")
+                        elif opco == 3:
+                            try:
+                                generatriz = float(input("ingrese el generatriz del cono: "))
+                                if generatriz > 0:
+                                    area_total = pi * radio * (radio + generatriz)
+                                    print("el area total es:", area_total)
+                                    co = False
+                                else:
+                                    print("error no puedes ingresar numeros igual o menores a cero")
+                            except:
+                                print("invalido intenta de nuevo")
+                    else:
+                        print("el radio debe ser mayor a cero")
                 except:
                     print("invalido intenta de nuevo")
 
@@ -325,6 +399,7 @@ while op:
                 1.hipotenusa
                 2.cateto adyacente
                 3.cateto opuesto
+                4.angulo
                  """)
             tr = True
             while tr:
@@ -334,30 +409,55 @@ while op:
                         try:
                             cateto_a = float(input("ingrese el cateto adyacente: "))
                             cateto_o = float(input("ingrese el cateto opuesto: "))
-                            hipotenusa = (cateto_a *2 + cateto_o **2) * (1/2)
-                            print("la hipotenusa del triangulo rectangulo es:", hipotenusa)
-                            tr = False
+                            if cateto_a > 0 and cateto_o >0:
+                                hipotenusa = (cateto_a *2 + cateto_o **2) * (1/2)
+                                print("la hipotenusa del triangulo rectangulo es:", hipotenusa)
+                                tr = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif optr == 2:
                         try:
                             cateto_o = float(input("ingrese el cateto opuesto: "))
                             hipotenusa = float(input("ingrese la hipotenusa: "))
-                            cateto_a = (hipotenusa *2 - cateto_o **2) *(1/2)
-                            print("el cateto adyacente es:", cateto_a)
-                            tr = False
+                            if cateto_o and hipotenusa > 0:
+                                cateto_a = (hipotenusa *2 - cateto_o **2) *(1/2)
+                                print("el cateto adyacente es:", cateto_a)
+                                tr = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except:
                             print("invalido intenta de nuevo")
                     elif optr == 3:
                         try:
                             cateto_a = float(input("ingrese el cateto adyacente: "))
                             hipotenusa = float(input("ingrese la hipotenusa: "))
-                            cateto_o = (hipotenusa*2 - cateto_a2) *(1/2)
-                            print("el cateto opuesto es:", cateto_o)
-                            tr = False
+                            if cateto_a >0 and hipotenusa > 0:
+                                cateto_o = (hipotenusa*2 - cateto_a2) *(1/2)
+                                print("el cateto opuesto es:", cateto_o)
+                                tr = False
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
                         except: 
                             print("invalido intenta de nuevo")
-
+                    elif optr == 4:
+                        try:
+                            a1 = float(input("ingrese el angulo uno: "))
+                            a2 = float(input("ingrese el angulo dos: "))
+                            if a1 > 0 and a1 == 90 or a2 > 0 and a2 == 90:
+                                suma_angulos = a1 + a2
+                                if suma_angulos <= 179.9: 
+                                    angulo = 180 - (a1 + a2)
+                                    print("el angulo es:", angulo)
+                                    tr = False
+                                else:
+                                    print("error no puedes ingresar numeros igual o menores a cero")
+                            else:
+                                print("error no puedes ingresar numeros igual o menores a cero")
+                                print("un angulo debe medir 90 grados ya que es un angulo rectangulo")
+                        except:
+                            print("invalido intenta de nuevo")                   
                 except: 
                     print("invalido intenta de nuevo")
 
